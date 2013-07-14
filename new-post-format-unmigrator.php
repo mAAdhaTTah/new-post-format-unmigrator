@@ -219,7 +219,7 @@ class New_Post_Format_Unmigrator {
 
 				// If there's a quote source, create the whole quote block
 				if ( $quote_source_name ) {
-					$post_content = "<figure>\n<blockquote>{$post_content}</blockquote>\n<figcaption>&mdash; {$quote_source_name}</figcaption>\n</figure>";
+					$post_content = "<p>{$quote_source_name}:</p>{$post_content}";
 				}
 				// Otherwise just blockquote the whole content area so it doesn't appear as a standard blog post
 				else {
